@@ -392,10 +392,10 @@ function updateLightboxContent() {
     };
   }
 
-  // WhatsApp butonuna projeyi otomatik ekle (Mak. Müh. Ertuğrul Duran)
+  // WhatsApp butonuna projeyi otomatik ekle (Mimar Ersin Duran)
   if (whatsappBtn) {
-    const message = encodeURIComponent(`Merhaba Ertuğrul Bey / Ersan Teknik, web sitenizdeki "${project.title}" projesi hakkında detaylı bilgi ve müsaitlik durumu almak istiyorum.`);
-    whatsappBtn.href = `https://wa.me/905426678767?text=${message}`;
+    const message = encodeURIComponent(`Merhaba Ersin Bey / Ersan Teknik, web sitenizdeki "${project.title}" projesi hakkında detaylı bilgi ve müsaitlik durumu almak istiyorum.`);
+    whatsappBtn.href = `https://wa.me/905415301043?text=${message}`;
   }
 
   // Teknik özellikler listesi

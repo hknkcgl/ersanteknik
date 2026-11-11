@@ -13,7 +13,7 @@
   - Mak. Müh. Ertuğrul Duran (Makine Mühendisi • WhatsApp & İletişim: 0542 667 87 67)
 * **Çan Merkez Ofisi:** İstiklal Mahallesi, Ordu Sokak, No: 9 Kat: 1, Çan / Çanakkale
 * **Yenice Şubesi:** Kurtuluş Mahallesi, Biga Caddesi, No: 38, Yenice / Çanakkale
-* **İletişim & WhatsApp:** 0542 667 87 67 (Mak. Müh. Ertuğrul Duran)
+* **İletişim & WhatsApp:** 0541 530 10 43 (Mimar Ersin Duran)
 * **Ofis Sabit Hat:** 0286 416 28 08
 * **E-posta:** duranersin@hotmail.com
 * **Faaliyet Alanları:** Depreme dayanıklı konut ve bina inşaatı, statik proje ve mühendislik hesapları, kat karşılığı inşaat, kentsel dönüşüm, anahtar teslim yapı taahhüt.
