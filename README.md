@@ -15,7 +15,7 @@
 * **Yenice Şubesi:** Kurtuluş Mahallesi, Biga Caddesi, No: 38, Yenice / Çanakkale
 * **İletişim & WhatsApp:** 0542 667 87 67 (Mak. Müh. Ertuğrul Duran)
 * **Ofis Sabit Hat:** 0286 416 28 08
-* **E-posta:** pehlivan_ert@hotmail.com
+* **E-posta:** duranersin@hotmail.com
 * **Faaliyet Alanları:** Depreme dayanıklı konut ve bina inşaatı, statik proje ve mühendislik hesapları, kat karşılığı inşaat, kentsel dönüşüm, anahtar teslim yapı taahhüt.
 
 ---
