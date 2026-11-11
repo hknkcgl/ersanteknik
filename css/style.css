@@ -291,7 +291,7 @@ ul {
 }
 
 .logo-img {
-  height: 52px;
+  height: 56px;
   width: auto;
 }
 
@@ -1696,8 +1696,11 @@ dialog[open]::backdrop {
 }
 
 .footer-logo {
-  height: 48px;
+  height: 56px;
   width: auto;
+  background: #FFFFFF;
+  padding: 0.5rem 0.85rem;
+  border-radius: 10px;
   margin-bottom: 1.25rem;
 }
 
