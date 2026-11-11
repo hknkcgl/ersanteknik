@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 75" width="380" height="75">
+  <defs>
+    <linearGradient id="logo-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c233c" />
+      <stop offset="100%" stop-color="#1d3d63" />
+    </linearGradient>
+    <linearGradient id="logo-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5af19" />
+      <stop offset="100%" stop-color="#e28906" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon Group -->
+  <g transform="translate(6, 6)">
+    <rect width="62" height="62" rx="14" fill="url(#logo-bg-grad)" />
+    <!-- Structural Truss & Triangle -->
+    <path d="M14 48 L31 16 L48 48 Z" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" />
+    <!-- Golden Technical Beam & T -->
+    <path d="M31 16 L52 16 L52 48" fill="none" stroke="url(#logo-gold)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="20" y1="36" x2="38" y2="36" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="36" y1="32" x2="52" y2="32" stroke="url(#logo-gold)" stroke-width="3" stroke-linecap="round" />
+    <line x1="36" y1="44" x2="48" y2="44" stroke="url(#logo-gold)" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Typography -->
+  <text x="82" y="38" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" fill="#0C233C">
+    ERSAN <tspan fill="url(#logo-gold)">TEKNİK</tspan>
+  </text>
+  <text x="83" y="56" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" letter-spacing="3" fill="#6B7280">
+    MÜHENDİSLİK &amp; İNŞAAT • ÇAN
+  </text>
+</svg>
