@@ -468,6 +468,22 @@ function initContactForm() {
     if (mailEl) mailEl.textContent = r.email;
     if (phoneEl) phoneEl.textContent = r.phone;
     if (btnPhoneEl) btnPhoneEl.textContent = r.phone;
+
+    // Sağ alttaki sabit WhatsApp butonu da seçili kişiyi açar
+    const floatingWa = document.getElementById("floating-whatsapp");
+    if (floatingWa) {
+      const url = new URL(floatingWa.href);
+      url.pathname = "/" + r.whatsapp;
+      floatingWa.href = url.toString();
+      floatingWa.title = `WhatsApp'tan Yazın (${r.phone})`;
+    }
+
+    // Sağ alttaki sabit arama butonu da seçili kişiyi arar
+    const floatingPhone = document.getElementById("floating-phone");
+    if (floatingPhone) {
+      floatingPhone.href = `tel:${r.phone.replace(/\s/g, "")}`;
+      floatingPhone.title = `Hemen Arayın: ${r.phone}`;
+    }
   };
   form.querySelectorAll("[name='recipient']").forEach((radio) => {
     radio.addEventListener("change", updateRecipientInfo);
