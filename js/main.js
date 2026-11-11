@@ -449,7 +449,15 @@ function initContactForm() {
 
   if (!form) return;
 
-  // 1. E-posta Uygulaması ile Gönder (Kime: duranersin@hotmail.com, Bilgi/CC: duranertugrul89@gmail.com)
+  // Alıcı kartı değişince alttaki bilgi notunu güncelle
+  const recipientSelectedEl = document.getElementById("recipient-selected");
+  form.querySelectorAll("[name='recipient']").forEach((radio) => {
+    radio.addEventListener("change", () => {
+      if (radio.checked && recipientSelectedEl) recipientSelectedEl.textContent = radio.value;
+    });
+  });
+
+  // 1. E-posta Uygulaması ile Gönder (alıcı kartlardan seçilir, varsayılan: duranersin@hotmail.com)
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -464,8 +472,8 @@ function initContactForm() {
       return;
     }
 
-    const emailTo = "duranersin@hotmail.com";      // Birincil alıcı
-    const emailCc = "duranertugrul89@gmail.com";   // İkinci alıcı (bilgi)
+    const selectedRecipient = form.querySelector("[name='recipient']:checked");
+    const emailTo = selectedRecipient ? selectedRecipient.value : "duranersin@hotmail.com";
     const emailSubject = encodeURIComponent(`[Ersan Teknik Web] ${subjectText} - ${name}`);
     const emailBody = encodeURIComponent(
       `Sayın Ersan Teknik Yetkilileri,\n\n` +
@@ -476,7 +484,7 @@ function initContactForm() {
       `• Mesaj:\n${message || 'Detay belirtilmedi.'}\n`
     );
 
-    const mailtoUrl = `mailto:${emailTo}?cc=${emailCc}&subject=${emailSubject}&body=${emailBody}`;
+    const mailtoUrl = `mailto:${emailTo}?subject=${emailSubject}&body=${emailBody}`;
 
     showFormStatus(
       statusEl, 
