@@ -449,13 +449,30 @@ function initContactForm() {
 
   if (!form) return;
 
-  // Alıcı kartı değişince alttaki bilgi notunu güncelle
-  const recipientSelectedEl = document.getElementById("recipient-selected");
+  // Seçili alıcı kartı (e-posta ve WhatsApp aynı kişiye gider, varsayılan: Ersin Duran)
+  const getRecipient = () => {
+    const radio = form.querySelector("[name='recipient']:checked");
+    return {
+      email: radio ? radio.value : "duranersin@hotmail.com",
+      whatsapp: radio ? radio.dataset.whatsapp : "905415301043",
+      phone: radio ? radio.dataset.phone : "0541 530 10 43"
+    };
+  };
+
+  // Kart değişince bilgi notunu ve WhatsApp butonundaki numarayı güncelle
+  const updateRecipientInfo = () => {
+    const r = getRecipient();
+    const mailEl = document.getElementById("recipient-mail");
+    const phoneEl = document.getElementById("recipient-phone");
+    const btnPhoneEl = document.getElementById("whatsapp-btn-phone");
+    if (mailEl) mailEl.textContent = r.email;
+    if (phoneEl) phoneEl.textContent = r.phone;
+    if (btnPhoneEl) btnPhoneEl.textContent = r.phone;
+  };
   form.querySelectorAll("[name='recipient']").forEach((radio) => {
-    radio.addEventListener("change", () => {
-      if (radio.checked && recipientSelectedEl) recipientSelectedEl.textContent = radio.value;
-    });
+    radio.addEventListener("change", updateRecipientInfo);
   });
+  updateRecipientInfo();
 
   // 1. E-posta Uygulaması ile Gönder (alıcı kartlardan seçilir, varsayılan: duranersin@hotmail.com)
   form.addEventListener("submit", (e) => {
@@ -472,8 +489,7 @@ function initContactForm() {
       return;
     }
 
-    const selectedRecipient = form.querySelector("[name='recipient']:checked");
-    const emailTo = selectedRecipient ? selectedRecipient.value : "duranersin@hotmail.com";
+    const emailTo = getRecipient().email;
     const emailSubject = encodeURIComponent(`[Ersan Teknik Web] ${subjectText} - ${name}`);
     const emailBody = encodeURIComponent(
       `Sayın Ersan Teknik Yetkilileri,\n\n` +
@@ -522,7 +538,7 @@ function initContactForm() {
       );
 
       showFormStatus(statusEl, "WhatsApp açılıyor...", "success");
-      window.open(`https://wa.me/905426678767?text=${waText}`, "_blank");
+      window.open(`https://wa.me/${getRecipient().whatsapp}?text=${waText}`, "_blank");
     });
   }
 }
