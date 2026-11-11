@@ -551,6 +551,63 @@ ul {
   font-weight: 600;
 }
 
+/* Hakkımızda - Çalışma Prensipleri paneli */
+.about-pillars {
+  background: linear-gradient(160deg, var(--color-primary) 0%, #1e3a5f 100%);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  border-top: 5px solid var(--color-accent);
+}
+
+.about-pillars-eyebrow {
+  color: var(--color-accent-light);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-pillar {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.about-pillar:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.about-pillar-icon {
+  flex: 0 0 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-pillar-title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.about-pillar-desc {
+  color: #D1D5DB;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .about-content h2 {
   font-size: 2.1rem;
   font-family: var(--font-heading);
